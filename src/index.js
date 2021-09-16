@@ -10,7 +10,6 @@ app.use('/', progLangApi)
 app.listen(PORT, () => console.log(`Server has been started on port ${PORT}`))
 
 
-
 // app.get('/programming-languages/:lang', async (req, res) => {
 //   const { lang } = req.params
 //   const result = programmingLanguages[lang]
@@ -22,9 +21,14 @@ app.listen(PORT, () => console.log(`Server has been started on port ${PORT}`))
 //   res.json({ language: result })
 // })
 
+
 // app.get('/programming-languages', async (req, res) => {
 //   res.json({ programmingLanguages })
 // })
+
+
+
+
 
 // app.post('/programming-languages/create', async (req, res) => {
 //   const { language, key } = req.body

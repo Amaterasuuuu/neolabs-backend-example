@@ -11,3 +11,5 @@ const programmingLanguages = {
 module.exports.find = () => programmingLanguages
 
 module.exports.findOne = lang => programmingLanguages[lang]
+
+module.exports.create = (key, value) => programmingLanguages[key] = value
