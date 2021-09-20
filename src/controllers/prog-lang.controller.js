@@ -23,6 +23,11 @@ class ProgLangController {
 
   create = async (req, res) => {
     const { key, value } = req.body
+    const languages = await this.service.find()
+    const exist = Object.values(languages).includes(value)
+    if (exist) {
+      return res.status(409).json({ message: 'Language already exist' })
+    }
     const newLang = await this.service.create(key, value)
     res.json({ success: !!newLang })
   }
